@@ -14,7 +14,7 @@ module.exports = {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        title: 'My App',
+        title: 'Spinning Bunny',
         filename: 'index.html',
         template: 'index.html'
       })
@@ -26,6 +26,12 @@ module.exports = {
             exclude: /node_modules/, 
             use: {
               loader: "babel-loader" 
+            }
+          },
+          {
+            test: /\.(jpe?g|gif|png|svg|woff|ttf|wav|mp3)$/, 
+            use: {
+              loader: "file-loader" 
             }
           }         
         ]

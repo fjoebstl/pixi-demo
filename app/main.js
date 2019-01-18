@@ -1,4 +1,5 @@
 import * as PIXI from 'pixi.js';
+import bunnyPng from '../images/bunny.png'
 
 let demo = {
     start : function(viewTarget)
@@ -12,7 +13,7 @@ let demo = {
         viewTarget.appendChild(app.view);
 
         // create a new Sprite from an image path
-        var bunny = PIXI.Sprite.fromImage('images/bunny.png')
+        var bunny = PIXI.Sprite.fromImage(bunnyPng)
 
         let resize = () => {
             // Get the p
