@@ -53,6 +53,4 @@ let demo = {
     }
 }
 
-let xyz = (n) => n + 1;
-
 demo.start(document.getElementById('pixi'));
