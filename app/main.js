@@ -1,4 +1,6 @@
 import * as PIXI from 'pixi.js';
+import style from '../css/skeleton.css'
+import style2 from '../css/normalize.css'
 import bunnyPng from '../images/bunny.png'
 
 let demo = {

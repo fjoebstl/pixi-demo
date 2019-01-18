@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     mode: 'development',
@@ -17,7 +18,8 @@ module.exports = {
         title: 'Spinning Bunny',
         filename: 'index.html',
         template: 'index.html'
-      })
+      }),
+      new ExtractTextPlugin('app.css', {allChunks: true})
     ],
     module: {
         rules: [
@@ -33,7 +35,11 @@ module.exports = {
             use: {
               loader: "file-loader" 
             }
-          }         
+          },         
+          {
+            test: /\.(css|scss)$/,
+              loader: ExtractTextPlugin.extract('css-loader')
+          }      
         ]
       }   
 };
